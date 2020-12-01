@@ -25,8 +25,17 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
 .bouncy {
-  border:10px solid blue;
-  border-radius:10px;
+  border:25px solid blue;
+  border-radius:25px;
   position:absolute;
+  background-color: green;
+}
+
+.explode {
+  border:50px solid rgb(4, 235, 4);
+  border-radius:50px;
+  position:absolute;
+  background-color: green;
 }

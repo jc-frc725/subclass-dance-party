@@ -9,5 +9,5 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 BouncyDancer.prototype.oldStep = BouncyDancer.prototype.step;
 BouncyDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.toggle();
+  this.$node.effect( 'bounce', { times: 2 }, 'slow' );
 };
