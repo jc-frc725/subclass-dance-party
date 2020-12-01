@@ -18,3 +18,7 @@ Dancer.prototype.setPosition = function(top, left) {
   // refer to $node of this instance of Dancer
   this.$node.css(styleSettings);
 };
+
+Dancer.prototype.lineUp = function(left) {
+  this.setPosition(100, left);
+};
