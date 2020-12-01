@@ -26,16 +26,17 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.blinky {
+  height: 50px;
+}
 .bouncy {
   border:25px solid blue;
   border-radius:25px;
-  position:absolute;
   background-color: green;
 }
 
 .explode {
   border:50px solid rgb(4, 235, 4);
-  border-radius:50px;
-  position:absolute;
+  border-radius:25px;
   background-color: green;
 }
