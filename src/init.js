@@ -38,13 +38,43 @@ $(document).ready(function() {
     // var lineUpFunction = window[lineUpFunctionName];
 
     // var line = lineUpFunction(
-    var start = 0;
-    console.log('line');
+    var left = 25;
+    var blinkyArr = [];
+    var bouncyArr = [];
+    var explodeArr = [];
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].lineUp(start);
-      start += 25;
-      console.log(start);
+      // obtain dancer
+      // check dancer type
+      // add dancer to appropriate array
+      console.log(window.dancers[i].$node[0].className);
+      if (window.dancers[i].$node[0].className === 'dancer blinky') {
+        blinkyArr.push(window.dancers[i]);
+      } else if (window.dancers[i].$node[0].className === 'dancer bouncy') {
+        bouncyArr.push(window.dancers[i]);
+      } else {
+        explodeArr.push(window.dancers[i]);
+      }
+
     }
+    // iterate thru dancer arrays
+    for (var i = 0; i < blinkyArr.length; i++) {
+      blinkyArr[i].lineUp(100, left);
+      left += 25;
+    }
+    left = 50;
+    for (var i = 0; i < bouncyArr.length; i++) {
+      bouncyArr[i].lineUp(200, left);
+      left += 50;
+    }
+    left = 100;
+    for (var i = 0; i < explodeArr.length; i++) {
+      explodeArr[i].lineUp(300, left);
+      left += 100;
+    }
+
+
+
+    // call lineUp for each one, with different top, left arguments
 
   });
 
